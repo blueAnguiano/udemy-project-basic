@@ -4,15 +4,12 @@ const __render = (file, response) => {
     return response.sendFile(path.join(__dirname + `/../views/${file}.html`));
 }
 
-class HomeController {
+class QuoteController {
     async index(request, response) {
-        __render('home', response);
+        __render('quote', response);
     }
 
-    async about(request, response) {
-        __render('about', response);
-    }
 
 }
 
-module.exports = new HomeController();
+module.exports = new QuoteController();
